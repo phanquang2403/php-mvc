@@ -1,7 +1,9 @@
 <?php 
-  class StudentModal{
+  class StudentModal extends DB{
     public function getSV(){
-      return 'phanquang';
+
+      $qr = "SELECT * FROM users";
+      return mysqli_query($this->conn,$qr );
     }
 
     public function sum($n , $m){

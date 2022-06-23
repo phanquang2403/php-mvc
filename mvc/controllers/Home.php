@@ -9,10 +9,12 @@
     }
 
     function Show () {
-      $data = 1;
+      
+      $sv = $this->modal('StudentModal');
+      $data = $sv->getSV();
       return $sv = $this->view('Students', [
-        "number" => $data,
-        "id" => 1,
+        "data" => $data,
+        "page" => 'News',
         "name" => "nguyen van a"
       ]);
     } 
