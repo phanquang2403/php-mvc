@@ -1,17 +1,18 @@
 <!-- controllers-home -->
 
 <?php 
-  Class Home {
+  Class Home extends Controllers {
 
-    
     function SayHi() {
-      echo "SayHi";
+      $sv = $this->modal('StudentModal');
+      echo $sv->getSV();
     }
 
-    function GoodBye () {
-      echo "GoodBye";
-
+    function Show () {
+      $sv = $this->modal('StudentModal');
+      echo $sv->sum(1, 2);
     }
+    
   }
 
 ?>
