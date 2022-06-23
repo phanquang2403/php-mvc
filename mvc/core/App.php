@@ -30,15 +30,9 @@
         unset($arr[1]);
 
       }
-
       // handle param
-
-
       $this->params = $arr ?? [];
 
-     
-
-      
       call_user_func_array([new $this->controller, $this->action], $this->params);
     }
 

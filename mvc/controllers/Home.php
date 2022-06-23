@@ -9,10 +9,12 @@
     }
 
     function Show () {
-      $sv = $this->modal('StudentModal');
-      echo $sv->sum(1, 2);
-    }
-    
+      $data = 1;
+      return $sv = $this->view('Students', [
+        "number" => $data,
+        "id" => 1,
+        "name" => "nguyen van a"
+      ]);
+    } 
   }
-
 ?>
